@@ -2,13 +2,20 @@
 
 @{
     ViewBag.Title = "Index";
+    var firstReview = Model.First(); //can declare variables  in block of code
 }
 
+@* Razor accepts C# code blocks as long as you start them as above with an @{ and ends in a } *@
+
 <h2>The Latest Reviews</h2>
+@firstReview.Name
+<br>
 
 We are showing the latest @Model.Count() reviews
-
-@VirtualPath  <!––path of the view  ––>
+<br>
+@VirtualPath  <!–– path of the view  ––>
+<br>
+<br>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -35,6 +42,7 @@ We are showing the latest @Model.Count() reviews
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
+                <!--// @*@Html.Raw(item.City)*@ executable script that does encode text as html script - can cause XSS attacks -->
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.City)
@@ -43,7 +51,8 @@ We are showing the latest @Model.Count() reviews
                 @Html.DisplayFor(modelItem => item.Country)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Rating)
+                @*@Html.DisplayFor(modelItem => item.Rating)  *@
+                @item.Rating /10 @* Implicit code expression or use () to use explicit  code expression and it will read code as C# code *@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
