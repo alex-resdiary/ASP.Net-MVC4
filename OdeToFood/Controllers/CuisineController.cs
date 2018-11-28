@@ -9,7 +9,7 @@ namespace OdeToFood.Controllers
     public class CuisineController : Controller
     {
         // GET: Cuisine
-        [HttpPost]
+        [Authorize]
         public ActionResult Search(string name) //can set default value by doing (string name="french" )
         {
             //server is a property that gets inherited from controller to get to server type properite
