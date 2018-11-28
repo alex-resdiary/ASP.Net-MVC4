@@ -12,6 +12,10 @@ namespace OdeToFood.Controllers
         // GET: Reviews
         public ActionResult Index()
         {
+            var model =
+                from r in _reviews
+                orderby r.Country
+                select r;
             return View();
         }
 
