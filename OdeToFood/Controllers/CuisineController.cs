@@ -18,11 +18,6 @@ namespace OdeToFood.Controllers
 
             var message = Server.HtmlEncode(name);
 
-
-            //comment
-            //Second Test comment
-
-
              return Content("<h1>Hello " + RouteData.Values["name"] + "</h1>");
             //or
             // return Content(message);
