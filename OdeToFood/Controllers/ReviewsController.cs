@@ -16,7 +16,7 @@ namespace OdeToFood.Controllers
                 from r in _reviews
                 orderby r.Country
                 select r;
-            return View();
+            return View(model);
         }
 
         // GET: Reviews/Details/5
