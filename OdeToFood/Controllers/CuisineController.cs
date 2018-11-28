@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OdeToFood.Filters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,7 +10,7 @@ namespace OdeToFood.Controllers
     public class CuisineController : Controller
     {
         // GET: Cuisine
-        [Authorize]
+        [Log]
         public ActionResult Search(string name) //can set default value by doing (string name="french" )
         {
             //server is a property that gets inherited from controller to get to server type properite
