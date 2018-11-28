@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OdeToFood.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -84,6 +85,36 @@ namespace OdeToFood.Controllers
             {
                 return View();
             }
+
         }
+
+        static List<RestaurantReview> _reviews = new List<RestaurantReview>
+        {
+            new RestaurantReview
+            {
+                ID=1,
+                Name="Cinammon Club",
+                City="London",
+                Country="UK",
+                Rating=10,
+            },
+               new RestaurantReview
+               {
+                ID=2,
+                Name="Marrakesh",
+                City="D.C",
+                Country="USA",
+                Rating=10,
+            },
+               new RestaurantReview
+               {
+                ID=3,
+                Name="The House of Elliot",
+                City="Ghent",
+                Country="Belgium",
+                Rating=10,
+            }
+
+        };
     }
 }
