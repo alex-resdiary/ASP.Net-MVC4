@@ -100,7 +100,7 @@ namespace OdeToFood.Controllers
                 Name="Cinammon Club",
                 City="London",
                 Country="UK",
-                Rating=10,
+                Rating=20,
             },
                new RestaurantReview
                {
@@ -108,7 +108,7 @@ namespace OdeToFood.Controllers
                 Name="Marrakesh",
                 City="D.C",
                 Country="USA",
-                Rating=10,
+                Rating=11,
             },
                new RestaurantReview
                {
@@ -116,7 +116,7 @@ namespace OdeToFood.Controllers
                 Name="The House of Elliot",
                 City="Ghent",
                 Country="Belgium",
-                Rating=10,
+                Rating=7,
             }
 
         };
